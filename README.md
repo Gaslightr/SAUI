@@ -13,7 +13,7 @@ Usage:
 ```lua
 ui:CreateHeader(name)
 ```
-name - the contents of the header
+- name - the contents of the header
 
 
 ### Button - Creates a button with a function that executes upon the NumpadFive button being clicked.
@@ -21,8 +21,8 @@ Usage:
 ```lua
 ui:CreateButton(name, callback)
 ```
-name - the name of the button
-callback - the function that is executed upon the NumpadFive button being clicked.
+- name - the name of the button
+- callback - the function that is executed upon the NumpadFive button being clicked.
 
 
 ### Toggle - Creates a button with a function that executes upon the NumpadFive button being clicked.
@@ -30,6 +30,6 @@ Usage:
 ```lua
 ui:CreateButton(name, state, callback)
 ```
-name - the name of the button
-state - if the button is on or off
-callback - the function that is executed upon the NumpadFive button being clicked.
+- name - the name of the button
+- state - if the button is on or off
+- callback - the function that is executed upon the NumpadFive button being clicked.
