@@ -5,7 +5,7 @@ Documentation:
 - Types:
   - [Header](https://github.com/Gaslightr/SAUI/blob/main/README.md#header---creates-an-uninteractive-piece-of-text-at-the-top-of-the-screen)
   - [Button](https://github.com/Gaslightr/SAUI/blob/main/README.md#button---creates-a-button-with-a-function-that-executes-upon-the-numpadfive-button-being-clicked)
-  - Toggle
+  - [Toggle](https://github.com/Gaslightr/SAUI/blob/main/README.md#toggle---creates-a-toggle-that-will-turn-on-and-off-when-you-press-numpadfive)
   - Slider
 
 ### Header - Creates an uninteractive piece of text at the top of the screen
