@@ -3,10 +3,10 @@
 
 Documentation:
 - Types:
--- Header
--- Button
--- Toggle
--- Slider
+ - Header
+ - Button
+ - Toggle
+ - Slider
 
 ### Header - Creates an uninteractive piece of text at the top of the screen
 Usage:
