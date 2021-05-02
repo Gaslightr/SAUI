@@ -3,7 +3,7 @@
 
 Documentation:
 - Types:
-  - Header
+  - [Header]https://github.com/Gaslightr/SAUI/blob/main/README.md#header---creates-an-uninteractive-piece-of-text-at-the-top-of-the-screen
   - Button
   - Toggle
   - Slider
