@@ -171,7 +171,7 @@ end
 
 function inputhandler(object)
     if object.UserInputType == Enum.UserInputType.Keyboard then
-        if object.KeyCode == Enum.KeyCode.KeypadNine then
+        if ui.active and object.KeyCode == Enum.KeyCode.KeypadNine then
             ui:ToggleVisiblity()
         end
         if object.KeyCode == Enum.KeyCode.KeypadTwo then -- UP
@@ -181,14 +181,14 @@ function inputhandler(object)
             end
             updateui()
         end
-        if object.KeyCode == Enum.KeyCode.KeypadEight then -- DOWN
+        if ui.active and object.KeyCode == Enum.KeyCode.KeypadEight then -- DOWN
             ui.selected -= 1
             if ui.selected < 1 then
                 ui.selected = #ui.interactive
             end
             updateui()
         end
-        if object.KeyCode == Enum.KeyCode.KeypadFive then -- SELECT
+        if ui.active and object.KeyCode == Enum.KeyCode.KeypadFive then -- SELECT
             local object = ui.interactive[ui.selected]
             if object.type == "Button" and object.callback then
                 object.callback()
@@ -201,7 +201,7 @@ function inputhandler(object)
                 end
             end
         end
-        if object.KeyCode == Enum.KeyCode.KeypadFour then -- LEFT
+        if ui.active and object.KeyCode == Enum.KeyCode.KeypadFour then -- LEFT
             local object = ui.interactive[ui.selected]
             if object.type == "Slider" then
                 object.value -= 1 
