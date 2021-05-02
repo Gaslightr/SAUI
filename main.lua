@@ -9,8 +9,10 @@ local cam = workspace.CurrentCamera
 local uis = game:GetService("UserInputService")
 local ui = {
     y = 32,
+    non = {},
     interactive = {},
-    selected = 1
+    selected = 1,
+    active = true
 }
 
 function draw(t, p)
@@ -42,6 +44,7 @@ function ui:CreateHeader(name)
     h.bg.Position -= Vector2.new(4, 4)
     h.bg.Size = h.text.TextBounds+Vector2.new(8, 8)
     ui.y += h.text.TextBounds.Y+8
+    table.insert(ui.non, h)
 end
 
 function ui:CreateButton(name, callback)
@@ -101,7 +104,7 @@ function ui:CreateToggle(name, on, callback)
     table.insert(ui.interactive, t)
 end
 
-function ui:CreateSlider(name, min, max, current, increment, callback)
+function ui:CreateSlider(name, min, max, current, callback)
     local s = {
         name = name,
         type = "Slider",
@@ -132,6 +135,18 @@ function ui:CreateSlider(name, min, max, current, increment, callback)
     table.insert(ui.interactive, s)
 end
 
+function ui:ToggleVisiblity()
+    ui.active = not ui.active
+    for i, t in next, ui.non do
+        t.bg.Visible = ui.active
+        t.text.Visible = ui.active
+    end
+    for i, t in next, ui.interactive do
+        t.bg.Visible = ui.active
+        t.text.Visible = ui.active
+    end
+end
+
 function updateui()
     for i, t in next, ui.interactive do
         if i == ui.selected then
@@ -156,6 +171,9 @@ end
 
 function inputhandler(object)
     if object.UserInputType == Enum.UserInputType.Keyboard then
+        if object.KeyCode == Enum.KeyCode.KeypadNine then
+            ui:ToggleVisiblity()
+        end
         if object.KeyCode == Enum.KeyCode.KeypadTwo then -- UP
             ui.selected += 1
             if ui.selected > #ui.interactive then
@@ -190,6 +208,9 @@ function inputhandler(object)
                 if object.value < object.min then
                     object.value = object.max
                 end
+                if object.callback then
+                    object.callback(object.value)
+                end
                 updateui()
             end
         end
@@ -199,6 +220,9 @@ function inputhandler(object)
                 object.value += 1 
                 if object.value > object.max then
                     object.value = object.min
+                end
+                if object.callback then
+                    object.callback(object.value)
                 end
                 updateui()
             end
