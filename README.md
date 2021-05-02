@@ -25,11 +25,23 @@ ui:CreateButton(name, callback)
 - callback - the function that is executed upon the NumpadFive button being clicked.
 
 
-### Toggle - Creates a button with a function that executes upon the NumpadFive button being clicked.
+### Toggle - Creates a toggle that will turn on and off when you press NumpadFive
 Usage:
 ```lua
-ui:CreateButton(name, state, callback)
+ui:CreateToggle(name, state, callback)
 ```
-- name - the name of the button
-- state - if the button is on or off
-- callback - the function that is executed upon the NumpadFive button being clicked.
+- name - the name of the toggle
+- state - if the toggle is on or off
+- callback - the function that is executed upon the toggle being toggled
+
+
+### Slider - Creates a slider that can be incremented or decreased with the press of NumpadFour or NumpadSix
+Usage:
+```lua
+ui:CreateButton(name, min, max, current, callback)
+```
+- name - the name of the slider
+- min - the lowest the slider can go
+- max - the highest the slider can go
+- current - the amount that the slider is at
+- callback - the function that is executed when the slider is incremented or decreased
