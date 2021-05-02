@@ -45,6 +45,7 @@ function ui:CreateHeader(name)
     h.bg.Size = h.text.TextBounds+Vector2.new(8, 8)
     ui.y += h.text.TextBounds.Y+8
     table.insert(ui.non, h)
+    return h
 end
 
 function ui:CreateButton(name, callback)
@@ -73,6 +74,7 @@ function ui:CreateButton(name, callback)
     b.bg.Size = b.text.TextBounds+Vector2.new(8, 8)
     ui.y += b.text.TextBounds.Y+8
     table.insert(ui.interactive, b)
+    return b
 end
 
 function ui:CreateToggle(name, on, callback)
@@ -102,6 +104,7 @@ function ui:CreateToggle(name, on, callback)
     t.bg.Size = t.text.TextBounds+Vector2.new(8, 8)
     ui.y += t.text.TextBounds.Y+8
     table.insert(ui.interactive, t)
+    return t
 end
 
 function ui:CreateSlider(name, min, max, current, callback)
@@ -133,6 +136,7 @@ function ui:CreateSlider(name, min, max, current, callback)
     s.bg.Size = s.text.TextBounds+Vector2.new(8, 8)
     ui.y += s.text.TextBounds.Y+8
     table.insert(ui.interactive, s)
+    return s
 end
 
 function ui:ToggleVisiblity()
