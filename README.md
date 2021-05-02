@@ -11,14 +11,14 @@ Documentation:
 ### Header - Creates an uninteractive piece of text at the top of the screen
 Usage:
 ```lua
-ui:CreateHeader([name])
+ui:CreateHeader(<name>)
 ```
 <name> - the contents of the header
 
 
 ### Button - Creates a button with a function that executes upon the NumpadFive button being clicked.
 Usage:
-```
+```lua
 ui:CreateButton(<name>, <callback>)
 ```
 <name> - the name of the button
@@ -27,7 +27,7 @@ ui:CreateButton(<name>, <callback>)
 
 ### Toggle - Creates a button with a function that executes upon the NumpadFive button being clicked.
 Usage:
-```
+```lua
 ui:CreateButton(<name>, <callback>)
 ```
 <name> - the name of the button
