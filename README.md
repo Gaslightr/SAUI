@@ -4,7 +4,7 @@
 Documentation:
 - Types:
   - [Header](https://github.com/Gaslightr/SAUI/blob/main/README.md#header---creates-an-uninteractive-piece-of-text-at-the-top-of-the-screen)
-  - Button
+  - [Button](https://github.com/Gaslightr/SAUI/blob/main/README.md#button---creates-a-button-with-a-function-that-executes-upon-the-numpadfive-button-being-clicked)
   - Toggle
   - Slider
 
