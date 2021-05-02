@@ -1,5 +1,12 @@
 # SAUI
-## Simple Ass UI - A basic UI made in Synapse Drawing Library, created by Gaslighter.
+### Simple Ass UI - A basic UI made in Synapse Drawing Library, created by Gaslighter.
+
+Documentation:
+- Types:
+-  Header
+-  Button
+-  Toggle
+-  Slider
 
 ### Header - Creates an uninteractive piece of text at the top of the screen
 Usage:
