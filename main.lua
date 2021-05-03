@@ -141,7 +141,6 @@ end
 
 function ui:ToggleVisiblity()
     ui.active = not ui.active
-    print(ui.active)
     for i, t in next, ui.non do
         t.bg.Visible = ui.active
         t.text.Visible = ui.active
@@ -176,7 +175,7 @@ end
 
 function inputhandler(object)
     if object.UserInputType == Enum.UserInputType.Keyboard then
-        if ui.active and object.KeyCode == Enum.KeyCode.KeypadNine then -- Toggle
+        if object.KeyCode == Enum.KeyCode.KeypadNine then -- Toggle
             ui:ToggleVisiblity()
         end
         if object.KeyCode == Enum.KeyCode.KeypadTwo then -- UP
