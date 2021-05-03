@@ -176,7 +176,7 @@ end
 
 function inputhandler(object)
     if object.UserInputType == Enum.UserInputType.Keyboard then
-        if ui.active and object.KeyCode == Enum.KeyCode.KeypadOne then -- Toggle
+        if ui.active and object.KeyCode == Enum.KeyCode.KeypadNine then -- Toggle
             ui:ToggleVisiblity()
         end
         if object.KeyCode == Enum.KeyCode.KeypadTwo then -- UP
