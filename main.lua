@@ -141,6 +141,7 @@ end
 
 function ui:ToggleVisiblity()
     ui.active = not ui.active
+    print(ui.active)
     for i, t in next, ui.non do
         t.bg.Visible = ui.active
         t.text.Visible = ui.active
